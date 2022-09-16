@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1023810687827276296
+--- !u!1 &9126348673323182704
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9011874015864732944}
-  - component: {fileID: 6911340689187990197}
-  - component: {fileID: 4518989482477438516}
-  - component: {fileID: 9011874015864732947}
+  - component: {fileID: 973507651483264360}
+  - component: {fileID: 3420484035371643597}
+  - component: {fileID: 5630818241144364620}
+  - component: {fileID: 6568405171771688162}
   m_Layer: 0
   m_Name: Washing_machine_01
   m_TagString: Untagged
@@ -19,37 +19,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9011874015864732944
+--- !u!4 &973507651483264360
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023810687827276296}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 20.616085, y: 1.2935684, z: -11.425102}
-  m_LocalScale: {x: 2.049772, y: 2.0497725, z: 2.0497725}
+  m_GameObject: {fileID: 9126348673323182704}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 1885.4401, y: 0, z: 1536.5414}
+  m_LocalScale: {x: 204.9773, y: 204.97725, z: 204.97725}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 861127313763493359}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 544
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6911340689187990197
+--- !u!33 &3420484035371643597
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023810687827276296}
-  m_Mesh: {fileID: 8385078600267347573, guid: 1052f0d81b5da004c8be793a87851430, type: 3}
---- !u!23 &4518989482477438516
+  m_GameObject: {fileID: 9126348673323182704}
+  m_Mesh: {fileID: 8385078600267347573, guid: ee4fa9ecd81208c44a35f57052bede1a, type: 3}
+--- !u!23 &5630818241144364620
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023810687827276296}
+  m_GameObject: {fileID: 9126348673323182704}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -63,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2459031194015087343, guid: 1052f0d81b5da004c8be793a87851430, type: 3}
+  - {fileID: 2100000, guid: 6c5019eb2143e02469cd51f146955600, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,100 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &9011874015864732947
+--- !u!65 &6568405171771688162
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023810687827276296}
+  m_GameObject: {fileID: 9126348673323182704}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7947995, y: 0.7829833, z: 1.1835651}
-  m_Center: {x: 0.00000010430812, y: 0.005503506, z: 0.02828521}
---- !u!1 &9003839383860501612
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 861127313763493359}
-  - component: {fileID: 4870203940576316017}
-  - component: {fileID: 1616989276809847195}
-  m_Layer: 0
-  m_Name: Washing_machine_d_01
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &861127313763493359
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9003839383860501612}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3321696, y: 0.37850475, z: 0.085038766}
-  m_LocalScale: {x: 0.9757182, y: 0.9757183, z: 0.9757183}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 9011874015864732944}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4870203940576316017
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9003839383860501612}
-  m_Mesh: {fileID: 1553174267959543946, guid: 1052f0d81b5da004c8be793a87851430, type: 3}
---- !u!23 &1616989276809847195
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9003839383860501612}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2459031194015087343, guid: 1052f0d81b5da004c8be793a87851430, type: 3}
-  - {fileID: 2100000, guid: 2394844ca8c417c4cbd0470e8052cea2, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+  m_Size: {x: 0.007947995, y: 0.00782983, z: 0.011835648}
+  m_Center: {x: 6.984919e-10, y: 0.000055035332, z: 0.00028285215}
