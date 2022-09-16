@@ -3,7 +3,12 @@ guid: 3369258036c094746a8605a6cb4bf166
 ModelImporter:
   serializedVersion: 22103
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: banisterbase_material
+    second: {fileID: 2100000, guid: 328d5658e3ed95746a0146daff7b712a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

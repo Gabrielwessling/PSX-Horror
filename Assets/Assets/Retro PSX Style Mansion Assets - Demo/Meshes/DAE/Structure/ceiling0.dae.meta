@@ -3,7 +3,12 @@ guid: 5df826eb1d0b3404ba988ed9465106e3
 ModelImporter:
   serializedVersion: 22103
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cieling0_material
+    second: {fileID: 2100000, guid: 5af15c0455166804ba70146ff7d8e385, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,12 @@ guid: 6805ad3fe38f3ab409bd1b2f53e93b99
 ModelImporter:
   serializedVersion: 22103
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: drawers_material
+    second: {fileID: 2100000, guid: 599afe49b674e6f46a8c9f2eb4483689, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

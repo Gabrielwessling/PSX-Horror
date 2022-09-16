@@ -3,7 +3,12 @@ guid: 6f9cd459d9bd919408422025f4463fd9
 ModelImporter:
   serializedVersion: 22103
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: candle_holder_material
+    second: {fileID: 2100000, guid: 8030d1e40db535b45a2a1dd3bd9d2a25, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

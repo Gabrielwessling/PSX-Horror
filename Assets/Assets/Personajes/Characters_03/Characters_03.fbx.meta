@@ -6,7 +6,12 @@ ModelImporter:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Characters_03
+    second: {fileID: 2100000, guid: 89057281ce9a9d649a03ffd9858a1714, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

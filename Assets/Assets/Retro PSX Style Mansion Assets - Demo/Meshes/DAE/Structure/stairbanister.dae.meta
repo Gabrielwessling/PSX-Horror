@@ -3,7 +3,12 @@ guid: 63fa220280c61d74d8630e8bb3d85d99
 ModelImporter:
   serializedVersion: 22103
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stairbansiter_material
+    second: {fileID: 2100000, guid: 6ead48cbf76509846b0ef188e4fbdd25, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
