@@ -6,11 +6,12 @@ public class demoController : MonoBehaviour
 {
     public Light flashlight;
     public bool flashOn;
+    public AnimationControl playerControl;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        playerControl = GameObject.FindGameObjectWithTag("Player").GetComponent<AnimationControl>();
     }
 
     // Update is called once per frame
@@ -24,6 +25,9 @@ public class demoController : MonoBehaviour
                 flashOn = true;
                 flashlight.gameObject.SetActive(true);
             }
+        }
+        if (Input.GetButtonDown("Interact")){
+            playerControl.isInteracting = true;
         }
         if (Input.GetKey("escape"))
         {

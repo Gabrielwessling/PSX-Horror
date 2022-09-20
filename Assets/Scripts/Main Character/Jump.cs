@@ -7,7 +7,7 @@ public class Jump : MonoBehaviour
     public event System.Action Jumped;
 
     [SerializeField, Tooltip("Prevents jumping when the transform is in mid-air.")]
-    GroundCheck groundCheck;
+    public GroundCheck groundCheck;
 
 
     void Reset()
