@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Interactor : MonoBehaviour
 {
     public LayerMask interactableLayermask = 8;
     public float interactDistance;
     public Camera cam;
-    UnityEvent OnInteract;
+    public Interactable interactable;
+    public Image interactImage;
+    public Sprite defaultIcon;
+    public Vector2 defaultIconSize;
+    public Sprite defaultInteractIcon;
+    public Vector2 defaultInteractIconSize;
 
     void Awake()
     {
@@ -24,10 +29,36 @@ public class Interactor : MonoBehaviour
         {
             if(hit.collider.GetComponent<Interactable>() != false)
             {
-                OnInteract = hit.collider.GetComponent<Interactable>().OnInteract;
-                if (Input.GetButtonDown("Interact")){
-                    OnInteract.Invoke();
+                if (interactable == null || interactable.ID != hit.collider.GetComponent<Interactable>().ID)
+                {
+                    interactable = hit.collider.GetComponent<Interactable>();
+                    interactImage.sprite = interactable.interactIcon;
                 }
+                if (interactable.interactIcon != null)
+                {
+                    interactImage.sprite = interactable.interactIcon;
+                    if (interactable.IconSize == Vector2.zero)
+                    {
+                        interactImage.rectTransform.sizeDelta = defaultInteractIconSize;
+                    } else {
+                        interactImage.rectTransform.sizeDelta = interactable.IconSize;
+                    }
+                } else
+                {
+                    interactImage.sprite = defaultInteractIcon;
+                    interactImage.rectTransform.sizeDelta = defaultInteractIconSize;
+                }
+                if (Input.GetButtonDown("Interact"))
+                {
+                    interactable.OnInteract.Invoke();
+                }
+            }
+        } else
+        {
+            if (interactImage.sprite != defaultIcon)
+            {
+                interactImage.sprite = defaultIcon;
+                interactImage.rectTransform.sizeDelta = defaultIconSize;
             }
         }
     }
