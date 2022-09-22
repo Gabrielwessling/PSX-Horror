@@ -14,10 +14,12 @@ public class Interactor : MonoBehaviour
     public Vector2 defaultIconSize;
     public Sprite defaultInteractIcon;
     public Vector2 defaultInteractIconSize;
+    AnimationControl playerAnimation;
 
     void Awake()
     {
         cam = GetComponent<Camera>();
+        playerAnimation = GameObject.FindGameObjectWithTag("Player").GetComponent<AnimationControl>();
     }
 
     // Update is called once per frame
@@ -50,6 +52,7 @@ public class Interactor : MonoBehaviour
                 }
                 if (Input.GetButtonDown("Interact"))
                 {
+                    playerAnimation._interact();
                     interactable.OnInteract.Invoke();
                 }
             }

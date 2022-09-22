@@ -32,8 +32,12 @@ public class AnimationControl : MonoBehaviour
         johnAnimator.SetFloat("Velocity", velocityTotal);
         johnAnimator.SetBool("isJumping", isJumping);
         if (isInteracting){
-            johnAnimator.SetTrigger("Interact");
-            isInteracting = false;
+            _interact();
         }
+    }
+    public void _interact()
+    {
+        johnAnimator.SetTrigger("Interact");
+        isInteracting = false;
     }
 }

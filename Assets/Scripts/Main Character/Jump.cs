@@ -3,6 +3,7 @@
 public class Jump : MonoBehaviour
 {
     Rigidbody rigidbody;
+    public KeyCode key;
     public float jumpStrength = 2;
     public event System.Action Jumped;
 
@@ -25,7 +26,7 @@ public class Jump : MonoBehaviour
     void LateUpdate()
     {
         // Jump when the Jump button is pressed and we are on the ground.
-        if (Input.GetButtonDown("Jump") && (!groundCheck || groundCheck.isGrounded))
+        if (Input.GetKeyDown(key) && (!groundCheck || groundCheck.isGrounded))
         {
             rigidbody.AddForce(Vector3.up * 100 * jumpStrength);
             Jumped?.Invoke();

@@ -14,6 +14,19 @@ public class demoController : MonoBehaviour
         playerControl = GameObject.FindGameObjectWithTag("Player").GetComponent<AnimationControl>();
     }
 
+    void Start()
+    {
+        if (flashOn)
+        {
+            flashOn = true;
+            flashlight.gameObject.SetActive(true);
+        } else
+        {
+            flashOn = false;
+            flashlight.gameObject.SetActive(false);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -27,11 +40,8 @@ public class demoController : MonoBehaviour
             }
         }
         if (Input.GetButtonDown("Interact")){
-            playerControl.isInteracting = true;
+            //dasf
         }
-        if (Input.GetKey("escape"))
-        {
-            Application.Quit();
-        }
+
     }
 }
