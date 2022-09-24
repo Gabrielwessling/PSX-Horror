@@ -14,12 +14,14 @@ public class StateManager : MonoBehaviour
     bool ingameState;
     bool pausemenuState;
     bool readingState;
+    bool optionsState;
     bool canMove;
     bool canLook;
 
     GameObject ingameUI;
     GameObject pausemenuUI;
     GameObject readingUI;
+    GameObject optionsUI;
 
     //BUG
     bool bugKey;
@@ -35,6 +37,7 @@ public class StateManager : MonoBehaviour
         ingameUI = GameObject.FindGameObjectWithTag("Ingame");
         pausemenuUI = GameObject.FindGameObjectWithTag("Pausemenu");
         readingUI = GameObject.FindGameObjectWithTag("Reading");
+        optionsUI = GameObject.FindGameObjectWithTag("Options");
     }
     void Start()
     {
@@ -47,6 +50,7 @@ public class StateManager : MonoBehaviour
         if (ingameState) {
             pausemenuState = false;
             readingState = false;
+            optionsState = false;
             canMove = true;
             canLook = true;
             fpLook._lockMouse();
@@ -67,6 +71,7 @@ public class StateManager : MonoBehaviour
         if (pausemenuState) {
             ingameState = false;
             readingState = false;
+            optionsState = false;
             canMove = false;
             canLook = false;
             fpLook._unlockMouse();
@@ -85,16 +90,12 @@ public class StateManager : MonoBehaviour
         }
         #endregion
 
-        #region BUG KEY
-        if (Input.GetKeyUp(gameSettings.pauseKey)){
-            bugKey = false;
-        }
-        #endregion
 
         #region Reading State
         if (readingState) {
             pausemenuState = false;
             ingameState = false;
+            optionsState = false;
             canMove = false;
             canLook = false;
             readingUI.SetActive(true);
@@ -102,7 +103,33 @@ public class StateManager : MonoBehaviour
             readingUI.SetActive(false);
         }
         #endregion
+
+        #region Options Menu State
+        if (optionsState) {
+            pausemenuState = false;
+            ingameState = false;
+            readingState = false;
+            canMove = false;
+            canLook = false;
+            optionsUI.SetActive(true);
+            if (Input.GetKeyDown(gameSettings.pauseKey))
+            {
+                if (optionsState && !bugKey){
+                    _pausemenuState();
+                    bugKey = true;
+                }
+            }
+        } else {
+            optionsUI.SetActive(false);
+        }
+        #endregion
         
+        #region BUG KEY
+        if (Input.GetKeyUp(gameSettings.pauseKey)){
+            bugKey = false;
+        }
+        #endregion
+
         #region canLook, canMove
         if (canLook) {
             fpLook.sensitivity = gameSettings.mouseSensitivity;
@@ -157,6 +184,11 @@ public class StateManager : MonoBehaviour
     {
         _resetStates();
         readingState = true;
+    }
+    public void _optionsState()
+    {
+        _resetStates();
+        optionsState = true;
     }
     public void _quitApplication(){
         Application.Quit();

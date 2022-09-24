@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class LightSwitch : MonoBehaviour
 {
     public Light lightsource;
     public GameObject lightbulb;
+    public bool hasVideo;
+    public VideoPlayer vidPlayer;
     public bool isOn;
 
     Material lightMat;
@@ -16,9 +19,11 @@ public class LightSwitch : MonoBehaviour
         if (isOn){
             lightsource.enabled = true;
             lightMat.SetColor("_EmissionColor", Color.white);
+            vidPlayer.Play();
         } else {
             lightsource.enabled = false;
             lightMat.SetColor("_EmissionColor", Color.black);
+            vidPlayer.Stop();
         }
     }
 
@@ -28,10 +33,12 @@ public class LightSwitch : MonoBehaviour
             lightsource.enabled = false;
             lightMat.SetColor("_EmissionColor", Color.black);
             isOn = false;
+            vidPlayer.Stop();
         } else {
             lightsource.enabled = true;
             lightMat.SetColor("_EmissionColor", Color.white);
             isOn = true;
+            vidPlayer.Play();
         }
     }
 }
